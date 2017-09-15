@@ -12,7 +12,7 @@ class Posts extends Component {
         return this.props.posts.map((post) => {
             return (
                 <li className="list-group-item" key={post.id}>
-                    <Link to={`post-${post.id}`} сlassName="w-100">
+                    <Link to={`post-${post.id}`} className="d-flex justify-content-between">
                         <strong>{post.title}</strong>
                         <span>{post.categories}</span>
                     </Link>
@@ -24,13 +24,13 @@ class Posts extends Component {
     render() {
         return (
             <div>
-                <div className="row">
-                    <Link to="new-post" className="btn btn-primary">
+                <div className="row justify-content-center align-items-center">
+                    <h3 className="m-2">Posts</h3>
+
+                    <Link to="new-post" className="btn btn-primary m-2">
                         Add post
                     </Link>
                 </div>
-
-                <h3>Posts</h3>
 
                 <ul className="list-group">
                     {this.renderPosts()}
